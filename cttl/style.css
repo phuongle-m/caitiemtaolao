@@ -1,0 +1,407 @@
+@font-face {
+    font-family: "GabrielSans";
+    src: url("Fonts/GabrielSans-Trial-Normal.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "GabrielBOLD";
+    src: url("Fonts/GabrielSans-Trial-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Garet";
+    src: url("Fonts/Garet-Book.ttf") format("truetype");
+}
+
+h1 {
+    font-family: "GabrielBOLD", sans-serif;
+}
+
+h3 {
+    font-family: "GabrielSans", sans-serif;
+}
+
+.product h2{
+    font-family: 'GabrielBOLD', sans-serif;
+}
+
+.product p{
+    font-family: 'GabrielSans', sans-serif;
+}
+
+nav a,
+.sale {
+    font-family: 'Garet', sans-serif;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+    }
+    
+    body{
+    background:#ddd;
+    }
+    
+    
+    /* SALE BAR */
+    
+    .sale{
+    background:#e83f63;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-weight:bold;
+    }
+    
+    .nav{
+    background:#f57c52;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0px 67px;
+    }
+    
+    .nav nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:40px;
+    font-weight:bold;
+    position:relative;
+    }
+    
+        
+    .nav nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:2px;
+    background:white;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+    }
+    
+    .nav nav a:hover::after{
+    width:100%;
+    }
+    
+    
+    /* TITLE */
+    
+    .title{
+    text-align:center;
+    padding:6.7px;
+    background:#e5e5e5;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+
+    /* LAYOUT */
+    
+    .container{
+    display:flex;
+    }
+    
+    
+    /* SIDEBAR */
+    
+    .sidebar{
+    width:250px;
+    padding:30px;
+    }
+    
+    .sidebar ul{
+    margin-top:10px;
+    padding-left:20px;
+    }
+    
+    .sidebar li{
+    margin:8px 0;
+    cursor:pointer;
+    transition:0.2s;
+    }
+    
+    .sidebar li:hover{
+    color:#e83f63;
+    transform:translateX(5px);
+    }
+    
+    
+    /* PRODUCTS */
+    
+    .products{
+    
+    flex:1;
+    
+    display:grid;
+    
+    grid-template-columns:repeat(3,1fr);
+    
+    border-left:1px solid red;
+    border-top:1px solid red;
+    
+    }
+    
+    
+    .product{
+    
+    padding:20px;
+    
+    border-right:1px solid red;
+    border-bottom:1px solid red;
+    
+    transition:0.3s;
+    
+    background:white;
+    
+    }
+    
+    
+    /* CARD HOVER */
+    
+    .product:hover{
+    
+    transform:translateY(-6px);
+    
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    
+    z-index:2;
+    
+    }
+    
+    
+    /* IMAGE */
+    
+    .imgbox{
+    
+    overflow:hidden;
+    
+    margin:10px 0;
+    
+    }
+    
+    .imgbox img{
+    
+    width:100%;
+    
+    transition:0.4s;
+    
+    }
+    
+    
+    /* IMAGE ZOOM */
+    .product:hover img{
+    transform:scale(1.08);
+    
+    }
+    
+    /* BUTTON */
+    
+    .add{
+        width:100%;
+        padding:10px;
+        border:2px solid black;
+        background:white;
+        cursor:pointer;
+        transition:0.3s;
+        font-weight:bold;
+        }
+        
+        .add:hover{
+            background:black;
+            color:white;
+            letter-spacing:1px;
+            }
+
+    .nav{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        }
+        
+        .nav img{
+        height:100px;
+        }
+
+        .cart-popup{
+
+            position: fixed;
+            
+            right: 20px;
+            
+            top: 80px;
+            
+            width: 260px;
+            
+            background: white;
+            
+            border: 1px solid black;
+            
+            padding: 20px;
+            
+            display: none;
+            
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            
+            }
+
+
+#added-message{
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: black;
+color: white;
+padding: 10px 20px;
+display: none;
+border-radius: 5px;
+}
+
+.added-message{
+
+position: fixed;
+
+bottom: 20px;
+
+right: 20px;
+
+background: black;
+
+color: white;
+
+padding: 10px 20px;
+
+border-radius: 5px;
+
+margin-top: 10px;
+
+}
+
+.team{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    padding:50px;
+    background:#eee;
+    }
+    
+    .member{
+    text-align:center;
+    }
+    
+    .member img{
+    width:220px;
+    margin-bottom:-40px;
+    }
+    
+    .card{
+    background:white;
+    padding:30px;
+    width:260px;
+    border:2px solid orange;
+    }
+    
+    .card h2{
+    margin-bottom:10px;
+    }
+    
+    .footer{
+    background:black;
+    text-align:center;
+    padding:40px;
+    }
+    
+    .footer img{
+    width:120px;
+    }
+
+    .card h2{
+        font-family: "GabrielBOLD", sans-serif;
+        }
+        
+        .card p{
+        font-family: "Garet", sans-serif;
+        }
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th, td{
+padding:10px;
+border-bottom:1px solid #ddd;
+text-align:left;
+}
+
+.cart-remove{
+    background:red;
+    color:white;
+    border:none;
+    padding:6px 10px;
+    cursor:pointer;
+    }
+
+/* CART PAGE */
+
+.cart-container{
+    width:700px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border:1px solid #ddd;
+    }
+    
+    .cart-table{
+    width:100%;
+    border-collapse:collapse;
+    }
+    
+    .cart-table th{
+    text-align:left;
+    padding:12px;
+    border-bottom:2px solid #ddd;
+    font-family:"GabrielBOLD", sans-serif;
+    }
+    
+    .cart-table td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    }
+    
+    .cart-remove{
+    background:#e83f63;
+    color:white;
+    border:none;
+    padding:6px 12px;
+    cursor:pointer;
+    }
+    
+    .cart-remove:hover{
+    background:#c12c4d;
+    }
+    
+    .cart-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    }
+    
+    .continue{
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+    }
+    
